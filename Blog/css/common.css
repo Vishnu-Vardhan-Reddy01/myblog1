@@ -1,0 +1,47 @@
+.navbar a{
+    color: white;
+    margin: 0 15px;
+}
+.nav-item a:hover{
+    color: lightgreen;
+}
+.search-icon:hover{
+    background-color: blue;
+}
+.bar::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: blue;
+    transition: width 0.4s ease;
+}
+.bar:hover::after{
+    width: 100%;
+}
+.search-box{
+    position: absolute;
+    top: 8px;
+    right: 6px;
+}
+/* top scrolling */
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+}
+.top-button:hover {
+    background-color: #555;
+}

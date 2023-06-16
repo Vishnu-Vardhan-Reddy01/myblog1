@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="header sticky-top">
+      <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">My Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active bar" aria-current="page" href="#" onclick="closeNavbar()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bar" href="events.html" onclick="closeNavbar()">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bar" href="news.html" onclick="closeNavbar()">News Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bar" href="services.html" onclick="closeNavbar()">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bar" href="contact.html" onclick="closeNavbar()">Help</a>
+                    </li>
+                </ul>
+                <form class="d-none d-lg-flex search-box" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary search-icon" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Close the navbar when clicking an anchor tag in mobile screen size
+        function closeNavbar() {
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarToggler.classList.contains('collapsed')) {
+                return; // Navbar is already closed
+            }
+            navbarToggler.click();
+        }
+    
+        // Show/hide the search box based on screen size
+        function handleResize() {
+            var searchBox = document.querySelector('.search-box');
+            if (window.innerWidth < 992) {
+                searchBox.style.display = 'none';
+            } else {
+                searchBox.style.display = 'flex';
+            }
+        }
+    
+        // Initial handling of the resize event
+        handleResize();
+    
+        // Handle the resize event
+        window.addEventListener('resize', handleResize);
+    </script>
+    
+    </header>
+
+    <section id="main-content">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="news.html"><img src="images/train.jpg" class="d-block w-100" alt="..."></a>
+                <div class="carousel-caption d-none d-md-block text">
+                    <h1>More than 260 dead after Odisha accident.</h1>
+                    <p>At least 261 people have been killed and 1,000 are injured in a crash involving three trains in India's eastern Odisha state.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/about.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text">
+                    <h1>Second slide label</h1>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/job.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text">
+                    <h1>Third slide label</h1>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <script>
+        // Initialize the carousel with auto-scrolling
+        var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
+            interval: 2000, // Set the desired interval in milliseconds
+            pause: 'hover' // Pause on mouse hover
+        });
+    </script>
+    
+    </section>
+<br>
+<section id="services">
+<br>
+  <h1 style="text-align:center;color:white;font-weight:bolder;font-family:Verdana, Geneva, Tahoma, sans-serif;cursor:pointer;cursor:pointer">Our Services</h1>
+  <section class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="category">
+                    <img src="images/news-icon.png" alt="Category 1" class="category-image">
+                    <h3>News Feed</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id dapibus ex.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="category">
+                    <img src="images/update-icon.jpeg" alt="Category 2" class="category-image">
+                    <h3>Latest Updates</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id dapibus ex.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="category">
+                    <img src="images/jobs-icon.png" alt="Category 3" class="category-image">
+                    <h3>Jobs</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id dapibus ex.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div><br>
+</section>
+</section><br>
+<section id="news"><br>
+  <div class="container">
+    <h2 style="text-align: center;font-weight:bolder;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;cursor:pointer">Recent News</h2><br><br>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="news-article">
+          <h3>Headline 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <p class="publication-date">Published: June 12, 2023</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="news-article">
+          <h3>Headline 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <p class="publication-date">Published: June 10, 2023</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="news-article">
+          <h3>Headline 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <p class="publication-date">Published: June 8, 2023</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+</section><br>
+
+<section id="upcoming-events">
+  <div class="container"><br>
+    <h2 style="text-align: center;color:white;font-weight:bolder;font-family:'Times New Roman', Times, serif;cursor:pointer">Upcoming Events</h2><br><br>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="event">
+          <h3>Event Title 1</h3>
+          <p>Date: June 20, 2023</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="event">
+          <h3>Event Title 2</h3>
+          <p>Date: July 5, 2023</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="event">
+          <h3>Event Title 3</h3>
+          <p>Date: August 15, 2023</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+</section><br>
+<section class="job-opportunities">
+  <div class="container">
+    <h2 style="text-align: center;font-weight:bolder;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;cursor:pointer">Job Opportunities</h2><br><br>
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="job">
+          <h3>Amazon</h3>
+          <p>Company: ABC Corporation</p>
+          <p>Location: New York, NY</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <div class="apply-button">
+            <a href="#" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="job">
+          <h3>TCS</h3>
+          <p>Company: XYZ Inc.</p>
+          <p>Location: San Francisco, CA</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <div class="apply-button">
+            <a href="#" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="job">
+          <h3>Google</h3>
+          <p>Company: PQR Corporation</p>
+          <p>Location: London, UK</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum urna ac diam facilisis, id consequat ligula blandit.</p>
+          <div class="apply-button">
+            <a href="#" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br>
+<!-- Arrow -->
+<a href="#top" class="top-button"><i class="fa fa-arrow-up"></i></a>
+<section id="footer">
+  <footer class="footer bg-dark text-light">
+    <div class="container">
+      <br>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <h5>About Us</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac mi dapibus, cursus nunc sed, laoreet libero.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5>Contact</h5>
+                <ul class="list-unstyled">
+                    <li>Email: vishnuvardhanr620@gmail.com</li>
+                    <li>Phone: 9110588755</li>
+                    <li>Address: 123 Street, City, Country</li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>&copy; 2023 Vishnu. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

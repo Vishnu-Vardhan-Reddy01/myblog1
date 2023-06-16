@@ -1,0 +1,47 @@
+*{
+    font-family:serif;
+}
+a{
+    font-family:monospace;
+}
+/* carousel */
+.text{
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 15px;
+    color: white;
+}
+.btn:hover{
+    background-color: green;
+}
+.carousel-item img{
+    width: 100%;
+    height: 500px;
+    background-color: gray;
+}
+.carousel-item p{
+    font-size: 30px;
+    color: dodgerblue;
+}
+.carousel-item h1{
+    color: coral;
+}
+.category-image{
+    width: 100px;
+    border-radius: 50%;
+    height: auto;
+}
+#services,#upcoming-events{
+    background-color: #ef8172;
+}
+.category{
+    text-align: center;
+}
+.job .apply-button{
+    display: flex;
+    justify-content: center;
+}
+.job{
+    text-align: center;
+}
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+        <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/services.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header sticky-top">
+            <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
+              <div class="container-fluid">
+                  <a class="navbar-brand" href="#" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">My Blog</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a class="nav-link bar" aria-current="page" href="blog.html" onclick="closeNavbar()">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active bar" href="events.html" onclick="closeNavbar()">Events</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link bar" href="news.html" onclick="closeNavbar()">News Feed</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link bar" href="services.html" onclick="closeNavbar()">Blog</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link bar" href="contact.html" onclick="closeNavbar()">Help</a>
+                          </li>
+                      </ul>
+                      <form class="d-none d-lg-flex search-box" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-primary search-icon" type="submit">
+                              <i class="fa fa-search"></i>
+                          </button>
+                      </form>
+                  </div>
+              </div>
+          </nav>
+          
+          <script>
+              // Close the navbar when clicking an anchor tag in mobile screen size
+              function closeNavbar() {
+                  var navbarToggler = document.querySelector('.navbar-toggler');
+                  if (navbarToggler.classList.contains('collapsed')) {
+                      return; // Navbar is already closed
+                  }
+                  navbarToggler.click();
+              }
+          
+              // Show/hide the search box based on screen size
+              function handleResize() {
+                  var searchBox = document.querySelector('.search-box');
+                  if (window.innerWidth < 992) {
+                      searchBox.style.display = 'none';
+                  } else {
+                      searchBox.style.display = 'flex';
+                  }
+              }
+          
+              // Initial handling of the resize event
+              handleResize();
+          
+              // Handle the resize event
+              window.addEventListener('resize', handleResize);
+          </script>
+          </header>
+
+          <section id="blog-section">
+            <div class="container"><br>
+              <h2>Latest Blog Posts</h2><br>
+          
+              <div class="blog-card">
+                <img src="images/neet.jpg" alt="Blog Image 1" class="blog-image">
+                <div class="blog-details">
+                  <h3 class="blog-title">NEET Results 2023</h3>
+                  <p class="blog-date">Published: June 14, 2023</p>
+                  <p class="blog-excerpt">The National Testing Agency (NTA) conducts the National Eligibility cum Entrance Test (NEET) exam in 13 languages. The single national-level undergraduate medical entrance exam, NEET UG held every year for admission to 645 medical, 318 dental, 914 AYUSH, and 47 BVSc and AH colleges in India.
+
+                    As per the latest update, NTA has declared the NEET 2023 result at neet.nta.nic.in in the form of scorecard. Candidates can download the NEET scorecard 2023 by entering their application number, date of birth and security pin. The NTA NEET 2023 final answer key will be released shortly. The NEET cutoff 2023 for General category is 720-137, for SC/ST/OBC category is 136-107, for General- PwD category is 136-121, and for SC/ST/OBC-PwD category is 120-107...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div><br>
+          
+              <div class="blog-card">
+                <img src="images/neet.jpg" alt="Blog Image 1" class="blog-image">
+                <div class="blog-details">
+                  <h3 class="blog-title">NEET Results 2023</h3>
+                  <p class="blog-date">Published: June 14, 2023</p>
+                  <p class="blog-excerpt">The National Testing Agency (NTA) conducts the National Eligibility cum Entrance Test (NEET) exam in 13 languages. The single national-level undergraduate medical entrance exam, NEET UG held every year for admission to 645 medical, 318 dental, 914 AYUSH, and 47 BVSc and AH colleges in India.
+
+                    As per the latest update, NTA has declared the NEET 2023 result at neet.nta.nic.in in the form of scorecard. Candidates can download the NEET scorecard 2023 by entering their application number, date of birth and security pin. The NTA NEET 2023 final answer key will be released shortly. The NEET cutoff 2023 for General category is 720-137, for SC/ST/OBC category is 136-107, for General- PwD category is 136-121, and for SC/ST/OBC-PwD category is 120-107...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div><br>
+          
+              <div class="blog-card">
+                <img src="images/neet.jpg" alt="Blog Image 1" class="blog-image">
+                <div class="blog-details">
+                  <h3 class="blog-title">NEET Results 2023</h3>
+                  <p class="blog-date">Published: June 14, 2023</p>
+                  <p class="blog-excerpt">The National Testing Agency (NTA) conducts the National Eligibility cum Entrance Test (NEET) exam in 13 languages. The single national-level undergraduate medical entrance exam, NEET UG held every year for admission to 645 medical, 318 dental, 914 AYUSH, and 47 BVSc and AH colleges in India.
+
+                    As per the latest update, NTA has declared the NEET 2023 result at neet.nta.nic.in in the form of scorecard. Candidates can download the NEET scorecard 2023 by entering their application number, date of birth and security pin. The NTA NEET 2023 final answer key will be released shortly. The NEET cutoff 2023 for General category is 720-137, for SC/ST/OBC category is 136-107, for General- PwD category is 136-121, and for SC/ST/OBC-PwD category is 120-107...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div><br>
+            </div>
+          </section>
+          <!-- Arrow -->
+<a href="#top" class="top-button"><i class="fa fa-arrow-up"></i></a>
+          
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+        <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/events.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header sticky-top">
+            <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
+              <div class="container-fluid">
+                  <a class="navbar-brand" href="#" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">My Blog</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a class="nav-link bar" aria-current="page" href="blog.html" onclick="closeNavbar()">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active bar" href="events.html" onclick="closeNavbar()">Events</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link bar" href="news.html" onclick="closeNavbar()">News Feed</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link bar" href="services.html" onclick="closeNavbar()">Blog</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link bar" href="contact.html" onclick="closeNavbar()">Help</a>
+                          </li>
+                      </ul>
+                      <form class="d-none d-lg-flex search-box" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-primary search-icon" type="submit">
+                              <i class="fa fa-search"></i>
+                          </button>
+                      </form>
+                  </div>
+              </div>
+          </nav>
+          
+          <script>
+              // Close the navbar when clicking an anchor tag in mobile screen size
+              function closeNavbar() {
+                  var navbarToggler = document.querySelector('.navbar-toggler');
+                  if (navbarToggler.classList.contains('collapsed')) {
+                      return; // Navbar is already closed
+                  }
+                  navbarToggler.click();
+              }
+          
+              // Show/hide the search box based on screen size
+              function handleResize() {
+                  var searchBox = document.querySelector('.search-box');
+                  if (window.innerWidth < 992) {
+                      searchBox.style.display = 'none';
+                  } else {
+                      searchBox.style.display = 'flex';
+                  }
+              }
+          
+              // Initial handling of the resize event
+              handleResize();
+          
+              // Handle the resize event
+              window.addEventListener('resize', handleResize);
+          </script>
+          
+          </header>
+          <!-- Arrow -->
+<a href="#top" class="top-button"><i class="fa fa-arrow-up"></i></a>
+          <section id="events-section">
+            <div class="container"><br>
+              <h2>Upcoming Events</h2>
+          
+              <div class="event-card">
+                <img src="images/yoga.jpg" alt="Event Image 1" class="event-image">
+                <div class="event-details">
+                  <h3 class="event-title">International Yoga Day</h3>
+                  <p class="event-date">Date: June 21, 2023</p>
+                  <p class="event-location">Location: ABC Convention Center</p>
+                  <a href="#" class="btn btn-primary">Register</a>
+                </div>
+              </div>
+          
+              <div class="event-card">
+                <img src="images/icc.jpeg" alt="Event Image 2" class="event-image">
+                <div class="event-details">
+                  <h3 class="event-title">ICC World Cup</h3>
+                  <p class="event-date">Date: October 10, 2023</p>
+                  <p class="event-location">Location: India</p>
+                  <a href="#" class="btn btn-primary">Register</a>
+                </div>
+              </div>
+          
+              <div class="event-card">
+                <img src="images/event3.jpeg" alt="Event Image 3" class="event-image">
+                <div class="event-details">
+                  <h3 class="event-title">Founders</h3>
+                  <p class="event-date">Date: June 23, 2023</p>
+                  <p class="event-location">Location: Hyderabad</p>
+                  <a href="#" class="btn btn-primary">Register</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
